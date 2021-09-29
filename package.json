@@ -1,0 +1,85 @@
+{
+  "name": "group_cfe_micro_base",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "typescript": true,
+    "declarations": true
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-group_cfe_micro_base",
+    "stop": "egg-scripts stop --title=egg-server-group_cfe_micro_base",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "fe-build": "npx webpack --config webpack.config.ts",
+    "test-local": "egg-bin test",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "cov": "egg-bin cov",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "ci": "npm run lint && npm run cov && npm run tsc",
+    "autod": "autod",
+    "lint": "eslint . --ext .ts",
+    "clean": "ets clean"
+  },
+  "dependencies": {
+    "egg": "^2.6.1",
+    "egg-scripts": "^2.6.0",
+    "egg-view-nunjucks": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/mini-css-extract-plugin": "^2.3.0",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.10.14",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@types/supertest": "^2.0.0",
+    "@types/webpack": "^5.28.0",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "autoprefixer": "^10.3.6",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.3.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.16.0",
+    "eslint": "^6.7.2",
+    "eslint-config-egg": "^8.0.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "postcss": "^8.3.8",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-scss": "^4.0.0",
+    "precss": "^4.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "ts-node": "^10.2.1",
+    "tslib": "^1.9.0",
+    "typescript": "^3.0.3",
+    "webpack": "^5.55.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "eslintIgnore": [
+    "coverage"
+  ],
+  "author": "cwj",
+  "license": "MIT"
+}
